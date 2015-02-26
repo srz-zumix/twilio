@@ -1,0 +1,12 @@
+application: twilio_sample
+version: 1
+runtime: php
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /gather
+  script: gather.php
+
+- url: /hello
+  script: helloworld.php
