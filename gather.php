@@ -1,5 +1,5 @@
 <?php
-require '/twilio-php/Services/Twilio.php'
+require '/twilio-php/Services/Twilio.php';
 
 $response = new Services_Twilio_Twiml();
 if( isset($_REQUEST['Digits']) ) {
@@ -19,3 +19,4 @@ if( isset($_REQUEST['Digits']) ) {
 }
 
 print $response;
+
