@@ -1,5 +1,5 @@
 <?php
-require '/twilio-php/Services/Twilio.php';
+require '/twilio-sample-123/twilio-php/Services/Twilio.php';
 
 $response = new Services_Twilio_Twiml();
 if( isset($_REQUEST['Digits']) ) {
@@ -7,15 +7,15 @@ if( isset($_REQUEST['Digits']) ) {
   switch($input) {
   case '1':
     $gather = $response->gather(array('numDigits' => 1, 'timeout' => '10'));
-    $gather->say('1‚ð‰Ÿ‚µ‚½‚È', array('language' => 'ja-jp'));
+    $gather->say('1ã‚’æŠ¼ã—ãŸãª', array('language' => 'ja-jp'));
     break;
   case '9':
-    $response->say('‚³‚æ‚¤‚È‚ç', array('language' => 'ja-jp'));
+    $response->say('ã•ã‚ˆã†ãªã‚‰', array('language' => 'ja-jp'));
     break;
   }
 } else {
   $gather = $response->gather(array('numDigits' => 1, 'timeout' => '10'));
-  $gather->say("‚È‚ñ‚©ƒ{ƒ^ƒ“‰Ÿ‚µ‚ÄB", array('language' => 'ja-jp'));
+  $gather->say('ãªã‚“ã‹ãƒœã‚¿ãƒ³æŠ¼ã—ã¦ã€‚', array('language' => 'ja-jp'));
 }
 
 print $response;
